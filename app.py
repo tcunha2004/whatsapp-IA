@@ -4,10 +4,10 @@ import os
 import time
 
 # Pegando a chave da OpenAI da variável de ambiente
-openai.api_key = os.environ.get("OPEN-AI-APIKEY")
+openai.api_key = os.environ.get("OPEN_AI_APIKEY")
 
 # ID do seu assistente (criado via https://platform.openai.com/assistants)
-ASSISTANT_ID = os.environ.get("OPEN-AI-ASSISTANT-ID")
+ASSISTANT_ID = os.environ.get("OPEN_AI_ASSISTANTID")
 
 app = Flask(__name__)
 
