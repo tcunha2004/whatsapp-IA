@@ -15,7 +15,7 @@ app = Flask(__name__)
 def responder():
     data = request.json
     numero = data.get("numero")
-    mensagem = data.get("mensagem")
+    mensagem = data.get("mensagem", "").replace("\n", " ").strip()
     thread_id = data.get("thread_id")  # ← recebido do Make, se houver
 
     if not numero or not mensagem:
